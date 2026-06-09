@@ -1,0 +1,64 @@
+# Entorno virtual
+env/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Variables de entorno
+.env
+
+# Flask
+instance/
+.webassets-cache/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Base de datos local
+*.db
+*.sqlite3
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de pruebas
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Archivos subidos
+uploads/
+media/
+static/uploads/
+
+# PDF y Excel generados
+*.pdf
+*.xlsx
+
+# Cache
+.cache/
+
+# Migrations
+migrations/__pycache__/
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/

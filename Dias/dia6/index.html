@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Desoft Neon Logo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#020b1f;
+    overflow:hidden;
+    font-family:'Orbitron', sans-serif;
+}
+
+/* =========================
+    CONTENEDOR
+========================= */
+
+.logo-container{
+    position:relative;
+    text-align:center;
+}
+
+/* =========================
+    ARCO SUPERIOR
+========================= */
+
+.arc{
+    position:absolute;
+    width:320px;
+    height:120px;
+    border-top:4px solid #00e5ff;
+    border-radius:50%;
+    top:-40px;
+    left:50%;
+    transform:translateX(-50%);
+    filter:
+        drop-shadow(0 0 10px #00e5ff)
+        drop-shadow(0 0 25px #00e5ff);
+
+    animation:
+        glowArc 2s infinite alternate,
+        moveLight 4s linear infinite;
+}
+
+/* =========================
+    TEXTO PRINCIPAL
+========================= */
+
+.logo{
+    font-size:95px;
+    font-weight:900;
+    letter-spacing:10px;
+    color:#00e5ff;
+    text-transform:uppercase;
+
+    text-shadow:
+        0 0 5px #00e5ff,
+        0 0 15px #00e5ff,
+        0 0 30px #00e5ff,
+        0 0 60px #00e5ff;
+
+    animation:neonPulse 2s infinite alternate;
+}
+
+/* =========================
+    SUBTITULO
+========================= */
+
+.subtitle{
+    margin-top:10px;
+    font-size:28px;
+    letter-spacing:8px;
+    color:white;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.7),
+        0 0 15px rgba(255,255,255,.4);
+}
+
+/* =========================
+    PARTICULAS
+========================= */
+
+.particle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:#00e5ff;
+    border-radius:50%;
+    box-shadow:0 0 15px #00e5ff;
+    animation:floatParticle 5s infinite linear;
+}
+
+.p1{
+    top:-60px;
+    left:-30px;
+}
+
+.p2{
+    top:20px;
+    right:-40px;
+    animation-delay:1s;
+}
+
+.p3{
+    bottom:-20px;
+    left:50px;
+    animation-delay:2s;
+}
+
+/* =========================
+    ANIMACIONES
+========================= */
+
+@keyframes neonPulse{
+
+    from{
+        text-shadow:
+            0 0 5px #00e5ff,
+            0 0 15px #00e5ff,
+            0 0 30px #00e5ff;
+    }
+
+    to{
+        text-shadow:
+            0 0 10px #00e5ff,
+            0 0 25px #00e5ff,
+            0 0 50px #00e5ff,
+            0 0 90px #00e5ff;
+    }
+}
+
+@keyframes glowArc{
+
+    from{
+        opacity:.6;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+/* MOVIMIENTO DE LA LUZ */
+
+@keyframes moveLight{
+
+    0%{
+        clip-path: inset(0 100% 0 0);
+    }
+
+    50%{
+        clip-path: inset(0 0 0 0);
+    }
+
+    100%{
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+/* PARTICULAS */
+
+@keyframes floatParticle{
+
+    0%{
+        transform:translateY(0px);
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="logo-container">
+
+    <div class="arc"></div>
+
+    <div class="logo">
+        DESOFT
+    </div>
+
+    <div class="subtitle">
+        DIGITAL MEDIA
+    </div>
+
+    <!-- PARTICULAS -->
+
+    <span class="particle p1"></span>
+    <span class="particle p2"></span>
+    <span class="particle p3"></span>
+
+</div>
+
+</body>
+</html>
