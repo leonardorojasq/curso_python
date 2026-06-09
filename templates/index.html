@@ -3,27 +3,115 @@
 {% block title %}Página Principal{% endblock %}
 
 {% block content %}
-    <h1>APRENDA PYTHON EN 3 MESES</h1>
-    <p>Esta es la mejor opción para aprender Python de forma rápida y efectiva.</p>
-    <h3>Objetivo: Dominar Python básico e intermedio.</h3>
 
-    <h2>¿Qué aprenderás?</h2>
-    <table>
-        <tr>
-            <th>SEMANA 1 — PYTHON DESDE CERO</th>
-            <th>Temario</th>
-        </tr>
-        <tr>
-            <td>Introducción a Python</td>
-            <td>Conceptos básicos, sintaxis, variables, tipos de datos, print(),imput(), Conversión de tipos.</td>
-        </tr>
-        <tr>
-            <td>Ejercicios:</td>
-            <td>Pedir nombre y edad, Calcular año nacimiento,Conversor pesos a dólares, Calcular promedio de 3 notas.</td>
-        </tr>
-        <tr>
-            <td>Mini reto:</td>
-            <td>Calculadora básica.</td>
-        </tr>
-    </table>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">🐍 Aprender Python</a>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#teoria">Teoría</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ejercicios">Ejercicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#laboratorios">Laboratorios</a></li>
+      </ul>
+
+      <!-- Botón Login -->
+      <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+        Login
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="bg-primary text-white text-center py-5">
+  <div class="container">
+    <h1>Aprende Python desde cero 🚀</h1>
+    <p>Tenemos teoría, ejercicios y laboratorios para tu aprendizaje</p>
+  </div>
+</header>
+
+<!-- SECCIONES -->
+<div class="container my-5">
+
+  <div class="row">
+
+    <!-- Teoría -->
+    <div class="col-md-4" id="teoria">
+      <div class="card shadow">
+        <div class="card-body text-center">
+          <h3>📘 Teoría</h3>
+          <p>Aprende conceptos básicos y avanzados</p>
+
+          <!-- Botones -->
+          <a href="{{ url_for('clases') }}"  class="btn btn-success mb-2">Clases</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ejercicios -->
+    <div class="col-md-4" id="ejercicios">
+      <div class="card shadow">
+        <div class="card-body text-center">
+          <h3>🧠 Ejercicios</h3>
+          <p>Practica lo aprendido</p>
+
+          <!-- Botones -->
+          <a href="#" class="btn btn-success mb-2">Ejercicio 1</a>
+          <a href="#" class="btn btn-success mb-2">Ejercicio 2</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Laboratorios -->
+    <div class="col-md-4" id="laboratorios">
+      <div class="card shadow">
+        <div class="card-body text-center">
+          <h3>🔬 Laboratorios</h3>
+          <p>Proyectos prácticos reales</p>
+
+          <!-- Botones -->
+          <a href="#" class="btn btn-warning mb-2">Lab 1</a>
+          <a href="#" class="btn btn-warning mb-2">Lab 2</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL LOGIN -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Iniciar sesión</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label>Contraseña</label>
+            <input type="password" class="form-control">
+          </div>
+
+          <button class="btn btn-primary w-100">Ingresar</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 {% endblock %}

@@ -13,6 +13,14 @@ def index():
 
 
 
+@app.route("/clases", methods=['GET'])
+def clases():
+    return render_template('clases.html')
+
+
+
+
+
 
 
 
