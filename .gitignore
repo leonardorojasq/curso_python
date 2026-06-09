@@ -1,5 +1,6 @@
 # Entorno virtual
 env/
+.env
 venv/
 .venv/
 
@@ -62,3 +63,4 @@ node_modules/
 # Build
 dist/
 build/
+Dias/dia9
